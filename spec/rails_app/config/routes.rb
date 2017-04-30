@@ -61,4 +61,14 @@ AppRoot::Application.routes.draw do
     get :test_create_from_provider_with_block
     get :login_at_test_with_state
   end
+
+  namespace :api do
+    controller :sorcery do
+      get :test_login
+      get :test_logout
+      get :some_action
+      get :test_auto_login
+      post :test_return_to
+    end
+  end
 end
